@@ -3,7 +3,7 @@ import './ExpenseForm.css';
 
 
 
-const ExpenseForm = () => {
+const ExpenseForm = ({onSaveExpenseData,onCancel,onSaveExpenseDataHandler}) => {
     const[title,setTitle]=useState('');
     const[amount,setAmount]=useState('');
     const[date,setDate]=useState('');
@@ -20,15 +20,16 @@ const ExpenseForm = () => {
         setDate(event.target.value);
     
     }
-    const saurabhHandler = event =>{
+    const saurabhHandler = (event) =>{
         event.preventDefault();
         const expenseData = {
             title : title,
             amount : +amount,
             date : new Date(date)
         };
-        console.log(expenseData,"this is my expense")
-    }
+        console.log(expenseData,"this is my expense");
+        onSaveExpenseData(expenseData);
+    } 
 
 
     return(
@@ -49,8 +50,8 @@ const ExpenseForm = () => {
                 </div>
             </div>
             <div className='new-expense__actions'>
-                <button type='button' onClick={oncancel}>cancel</button>
-                <button type='submit'>add expense</button>
+                <button type='button' onSaveExpenseData={onSaveExpenseDataHandler} onClick={onCancel}>cancel</button>
+                <button type='submit' >add expense</button>
             </div>
         </form>
         </>
