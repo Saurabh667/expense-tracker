@@ -1,7 +1,8 @@
-import Card from './Card'
+import React from 'react';
+import Card from './Card';
 // import ExpenseForm from './ExpenseForm'
-import './ExpenseItems.css'
-import ExpenseDate from "./ExpenseDate.jsx"
+import './ExpenseItems.css';
+import ExpenseDate from "./ExpenseDate.jsx";
 
 const ExpenseItems = ({title,amount,date}) => {
     return(
@@ -17,4 +18,4 @@ const ExpenseItems = ({title,amount,date}) => {
     )
 
 }
-export default ExpenseItems
+export default ExpenseItems;
