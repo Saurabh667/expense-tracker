@@ -1,4 +1,5 @@
 import React from "react";
+import './ExpenseFilter.css';
 
 const ExpenseFilter = ({selected,onFilterChange}) => {
     const dropdownChangeHandler=event=>{
@@ -19,3 +20,4 @@ const ExpenseFilter = ({selected,onFilterChange}) => {
         </div>
     )
 }
+export default ExpenseFilter

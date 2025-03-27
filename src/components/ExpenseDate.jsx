@@ -2,8 +2,8 @@ import './ExpenseDate.css';
 
 function ExpenseDate({date}){
     console.log(date,"this is the givemn date")
-    const month=date.toLocalestring('en-US',{month:'long'});
-    const day=date.toLocalestring('en-US',{day:'long'});
+    const month=date.toLocaleString('en-US',{month:'long'});
+    const day=date.toLocaleString('en-US',{day:'2-digit'});
     const year=date.getFullYear();
 
     return(
